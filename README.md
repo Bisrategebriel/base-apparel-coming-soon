@@ -38,8 +38,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub Repository](https://github.com/Bisrategebriel/base-apparel-coming-soon)
+- Live Site URL: [Base Apparel Coming Soon](https://base-apparel-ruby.vercel.app/)
 
 ## My process
 
