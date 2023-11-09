@@ -1,0 +1,283 @@
+:root {
+  --primary-color-one: hsl(0, 36%, 70%);
+  /*Desaturated Red*/
+  --primary-color-two: hsl(0, 93%, 68%);
+  /* Soft Red*/
+  --neutral-color: hsl(0, 6%, 24%);
+  --gradient-one: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --gradient-two: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  place-items: center;
+  background: url('/images/bg-pattern-desktop.svg');
+  background-size: 63%;
+  background-repeat: no-repeat;
+  /* background-position: center right; */
+}
+
+.coming-soon {
+  width: 45%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px calc(100% - 450px) 100px;
+  row-gap: 3rem;
+}
+
+.coming-soon .logo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.coming-soon .logo img {
+  height: 30px;
+}
+
+.coming-soon .coming-soon-message {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+
+.coming-soon .coming-soon-message h1 {
+  font-size: clamp(2rem, 4rem, 7rem);
+  color: rgba(0, 0, 0, 0.75);
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-weight: 600;
+}
+
+.coming-soon .coming-soon-message h1 span {
+  color: var(--primary-color-one);
+  font-weight: 300;
+}
+
+.coming-soon .coming-soon-message p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--primary-color-one);
+  line-height: 1.5rem;
+}
+
+.coming-soon .coming-soon-message .subscribe {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.coming-soon-message .subscribe input {
+  width: 100%;
+  height: 50px;
+  padding: 0.8rem;
+  border-radius: 50px;
+  border: 1px solid var(--primary-color-one);
+  outline: 1px solid var(--primary-color-one);
+}
+
+.coming-soon-message .subscribe button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  width: 90px;
+  height: 100%;
+  border: none;
+  box-shadow: 1px 1px 4px 2px var(--primary-color-one);
+  border-radius: 30px;
+  background: var(--gradient-two);
+}
+
+.coming-soon-message .subscribe button:hover {
+  box-shadow: 1px 1px 25px 4px var(--primary-color-one);
+  opacity: 0.8;
+}
+
+.icon-error {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 105px;
+  top: 15px;
+  display: none;
+}
+
+.subscribe .input {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.errorText {
+  color: var(--primary-color-two) !important;
+  font-size: 0.8rem !important;
+  display: block;
+  justify-self: end;
+  line-height: 0.5rem !important;
+  margin-left: 1.5rem;
+  display: none;
+}
+
+.hero-banner {
+  width: 100%;
+  height: 100vh;
+}
+
+.hero-banner img {
+  height: 100%;
+  width: 100%;
+}
+
+/* small device */
+@media(max-width: 374px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    position: relative;
+  }
+
+
+  .coming-soon {
+    width: 100%;
+    margin: auto;
+  }
+
+  .coming-soon .logo {
+    background: white;
+    padding: 0 1rem;
+  }
+
+  .coming-soon .logo img {
+    padding-left: 1rem;
+  }
+
+  .coming-soon-message {
+    padding: 0 1rem;
+  }
+
+  .hero-banner {
+    display: none;
+  }
+}
+
+/* mobile device */
+@media (min-width: 375px) and (max-width: 568px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    position: relative;
+  }
+
+  .coming-soon .logo img {
+    padding-left: 2rem;
+  }
+
+  .coming-soon {
+    width: 100%;
+  }
+
+  .coming-soon .logo {
+    background: white;
+  }
+
+  .coming-soon-message {
+    width: 90%;
+    position: absolute;
+    bottom: 5.3rem;
+    margin: 0 1rem;
+    z-index: 200;
+  }
+
+  .coming-soon .coming-soon-message h1 {
+    text-align: center;
+    font-size: clamp(1rem, 3rem, 5rem);
+  }
+
+  .coming-soon .coming-soon-message p {
+    width: 100%;
+    margin: auto;
+  }
+
+  .hero-banner {
+    position: absolute;
+    top: 6.3rem;
+  }
+
+  .hero-banner img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: top center;
+  }
+}
+
+/* tablet devices */
+@media (min-width: 569px) and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    position: relative;
+  }
+
+  .coming-soon .coming-soon-message .subscribe {
+    width: 70%;
+    margin: auto;
+  }
+
+  .coming-soon .coming-soon-message p {
+    width: 25rem;
+    margin: auto;
+  }
+
+  .coming-soon .logo img {
+    padding-left: 2rem;
+  }
+
+  .coming-soon {
+    width: 100%;
+  }
+
+  .coming-soon .logo {
+    background: white;
+  }
+
+  .coming-soon-message {
+    width: 90%;
+    position: absolute;
+    bottom: 5.3rem;
+    margin: 0 1rem;
+    z-index: 200;
+  }
+
+  .coming-soon .coming-soon-message h1 {
+    text-align: center;
+    font-size: clamp(1rem, 3rem, 5rem);
+  }
+
+  .hero-banner {
+    position: absolute;
+    top: 6.3rem;
+  }
+
+  .hero-banner img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: top center;
+  }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- custom style -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Container -->
+    <div class="container">
+      <div class="coming-soon">
+        <div class="logo">
+          <img src="./images/logo.svg" alt="logo" />
+        </div>
+        <div class="coming-soon-message">
+          <h1>
+            <span>We're</span> <br />
+            Coming <br />
+            Soon
+          </h1>
+          <p>
+            Hi fellow shoppers! We're currently building our new fashion store.
+            Add your email below to stay up-to-date with announcements and our
+            launch deals.
+          </p>
+          <form class="subscribe">
+            <div class="input">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email Address"
+                />
+                <img src="/images/icon-error.svg" alt="error" class="icon-error">
+            </div>
+            <button type="submit">
+              <img src="./images/icon-arrow.svg" alt="icon arrow" />
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="hero-banner">
+        <img src="./images/hero-desktop.jpg" alt="hero banner" />
+      </div>
+    </div>
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/bisrategebriel">Bisrategebriel Fisseha</a>.
+      </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./app.js"></script>
+  </body>
+</html>
